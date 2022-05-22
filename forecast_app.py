@@ -110,7 +110,13 @@ def thread_for_weather_maps(locations):
         for a in db['{}'.format(city)].find({}):
      
             location = locations[city]
-            maps = folium.Map(location=[location.latitude, location.longitude],tiles='cartodbdark_matter', zoom_start=8,
+            maps = folium.Map(location=[location.latitude,
+             location.longitude],
+            #  tiles='https://tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png?apikey=d53cf59c925e449e9e3ac2691c8351c3',
+            # tiles = 'https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9.html?title=view&access_token=pk.eyJ1Ijoiam95d2FuamlydSIsImEiOiJja3Zoc3FlYzQ0MGFyMzNva3UzcWE2bDNlIn0.JpDbAoayozD0LFBNcQd7sg&zoomwheel=true&fresh=true#4.51/1.62/34.5/{z}/{x}/{y}.png?access_key=pk.eyJ1Ijoiam95d2FuamlydSIsImEiOiJja3Zoc3FlYzQ0MGFyMzNva3UzcWE2bDNlIn0.JpDbAoayozD0LFBNcQd7sg',
+            # tiles = 'https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9/wmts?access_token=pk.eyJ1Ijoiam95d2FuamlydSIsImEiOiJja3Zoc3FlYzQ0MGFyMzNva3UzcWE2bDNlIn0.JpDbAoayozD0LFBNcQd7sg',
+            tiles = 'https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoiam95d2FuamlydSIsImEiOiJja3Zoc3FlYzQ0MGFyMzNva3UzcWE2bDNlIn0.JpDbAoayozD0LFBNcQd7sg',
+              zoom_start=8,
                        attr="<a href=https://endless-sky.github.io/>Endless Sky</a>")
             weather = str(a["data"]['weather'][0]['description'])
             last_timestamp_date = str(a["data"]['dt_txt'])
@@ -138,31 +144,24 @@ def thread_for_weather_maps(locations):
             maps.add_child(popup)
             # Adding a legend to the map            
             legend_html =   '''
-                    <div style="position: fixed; 
-                                bottom: 100px; left: 50px; width: 120px; height: 90px; 
-                                border:2px solid grey; z-index:9999; font-size:12px;
-                                "
-                                >
-                                <b>
-                                <font color="red">
-                                &nbsp;                             
-                                Legend
-                                </font>
-                                </b>
-                                <br>
-                                     <img 
-                                         src="%s" alt="weather" height="40" width="40"
-                                     />
-                                      <b> <font color="green">
-                                      &nbsp; %s &nbsp;
-                                      </font>
-                                      </b?
-                                      <i 
-                                          class="icon" style="color:red">
-                                      </i>
-                                <br>
-                                  
-                    </div>
+                 <div style="position: fixed; background-color: #e6e9fe; align-content: center; font-family: century gothic;
+                            bottom: 50px; left: 50px; width: 180px; height: 40px;
+                            border:2px solid grey; border-radius: 40px; z-index:9999; font-size:12px;
+                            "
+                            >
+                            
+                                 <img 
+                                     src="%s" alt="weather" height="40" width="40"
+                                 />
+                                  <b> <font color="">
+                                  &nbsp; %s &nbsp;
+                                  </font>
+                                  </b?
+                                  <i 
+                                      class="icon" style="color:red">
+                                  </i>
+                            
+                </div>
                     ''' %(icon_url,weather)
 
             # Create and save the map
@@ -185,7 +184,13 @@ def thread_for_latest_weather_map(locations):
         cursor = list(db['{}'.format(city)].find().sort([('_id', -1)]).limit(1))
         
         location = locations[city]
-        maps = folium.Map(location=[location.latitude, location.longitude],tiles='cartodbdark_matter', zoom_start=8,
+        maps = folium.Map(location=[location.latitude,
+         location.longitude],
+        #  tiles='https://tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png?apikey=d53cf59c925e449e9e3ac2691c8351c3', 
+        #  tiles = 'https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9.html?title=view&access_token=pk.eyJ1Ijoiam95d2FuamlydSIsImEiOiJja3Zoc3FlYzQ0MGFyMzNva3UzcWE2bDNlIn0.JpDbAoayozD0LFBNcQd7sg&zoomwheel=true&fresh=true#4.51/1.62/34.5/{z}/{x}/{y}.png?access_key=pk.eyJ1Ijoiam95d2FuamlydSIsImEiOiJja3Zoc3FlYzQ0MGFyMzNva3UzcWE2bDNlIn0.JpDbAoayozD0LFBNcQd7sg',
+        # tiles = 'https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9/wmts?access_token=pk.eyJ1Ijoiam95d2FuamlydSIsImEiOiJja3Zoc3FlYzQ0MGFyMzNva3UzcWE2bDNlIn0.JpDbAoayozD0LFBNcQd7sg',
+        tiles = 'https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoiam95d2FuamlydSIsImEiOiJja3Zoc3FlYzQ0MGFyMzNva3UzcWE2bDNlIn0.JpDbAoayozD0LFBNcQd7sg',
+         zoom_start=8,
                    attr="<a href=https://endless-sky.github.io/>Endless Sky</a>")
         weather = str(cursor[0]["data"]['weather'][0]['description'])
         last_timestamp_date = str(cursor[0]["data"]['dt_txt'])
@@ -207,29 +212,23 @@ def thread_for_latest_weather_map(locations):
         maps.add_child(marker)
         maps.add_child(folium.Popup(temperature))
         legend_html =   '''
-                <div style="position: fixed; 
-                            bottom: 100px; left: 50px; width: 120px; height: 90px; 
-                            border:2px solid grey; z-index:9999; font-size:12px;
+                <div style="position: fixed; background-color: #e6e9fe; align-content: center; font-family: century gothic;
+                            bottom: 50px; left: 50px; width: 180px; height: 40px; 
+                            border:2px solid grey; border-radius: 40px; z-index:9999; font-size:12px;
                             "
                             >
-                            <b>
-                            <font color="red">
-                            &nbsp;                             
-                            Legend
-                            </font>
-                            </b>
-                            <br>
+                            
                                  <img 
                                      src="%s" alt="weather" height="40" width="40"
                                  />
-                                  <b> <font color="green">
+                                  <b> <font color="">
                                   &nbsp; %s &nbsp;
                                   </font>
                                   </b?
                                   <i 
                                       class="icon" style="color:red">
                                   </i>
-                            <br>
+                            
                 </div>
                 ''' %(icon_url,weather)
         maps.get_root().html.add_child(folium.Element(legend_html))        
@@ -264,13 +263,21 @@ def thread_for_plotting_forecast_data():
 
     # Plot the weather forecast for each city
     for city in city_names:
-        data=go.Scatter(x=date_times,y=temperatures[city],mode = "lines")
+        data=go.Bar(x=date_times,y=temperatures[city], marker=dict(color=temperatures[city],
+                     colorscale='viridis'))
         layout=dict(
             title ="Temperature forecast for "+str(city)+" ",
-            xaxis = dict(title ="Date and Time", showgrid=False),
+            xaxis = dict(title =None, showgrid=False),
             yaxis = dict(title ="Temperature (F)", showgrid = False))
         fig = go.Figure(data=data,layout=layout)
-        fig.update_layout(paper_bgcolor="black", plot_bgcolor = "black")
+        fig.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)", 
+            plot_bgcolor = "rgba(0,0,0,0)",
+            font_color="RebeccaPurple",
+            title={'y':1.0,'x':0.5,'xanchor': 'center','yanchor': 'top'},
+            title_font_family="Century Gothic",
+            title_font_color="RebeccaPurple",
+            title_font_size=20)
         fig.write_html("./"+city+".html")
         
 
