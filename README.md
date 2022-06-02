@@ -1,4 +1,10 @@
-## FoRe Weather App :cloud:
+
+---
+
+<h1 align="center">FoRe Weather App</h1>
+<p align="center">
+  A Python based weather dashboard.
+</p>
 
 ![Fore_screenshot](https://user-images.githubusercontent.com/70502261/170562199-86f0e025-bb8a-41b8-96e6-fdd851d48b5a.png)
 
@@ -25,9 +31,9 @@ Main libraries used are:
 * View the blog [here](https://medium.com/@joywanjiru879/fore-weather-app-745daff2bea7)
 * [LinkedIn](https://www.linkedin.com/in/joy-wanjiru-b717a0240/)
 
-#### Installation
+### Installation
 
-For you to work with this project you need the following prerequisites:
+Prerequisites:
 * An OpenWeatherMap free account which will give you access to an API key
 * Choose a map tile layer of your choice either by creating a [mapbox free account](https://account.mapbox.com/auth/signup/) and designing your tiles in mapbox studio or choosing from the existing list of available [tile options](http://leaflet-extras.github.io/leaflet-providers/preview/)
 
