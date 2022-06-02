@@ -67,7 +67,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ### Future
 I am looking forward to collecting more data and completing this project from a data science perspective. The main inspiration being that it is not enough to just present numbers to people. What does a forecast of 26 degrees celsius minimum temperatures really mean for a farmer or a traveller? I am keen on exploring weather variables and how they affect various demographies and how we can assimilate an informative product that shows forecasts and recommended activities.
 
-If you have any ideas or suggestions or conributions feel free to reach out to me via [mail](mailto: joywanjiru879@gmail.com) :e-mail:
+If you have any ideas or suggestions or conributions feel free to reach out to me via [mail](joywanjiru879@gmail.com) :e-mail:
 
 
 ### Author :black_nib:
