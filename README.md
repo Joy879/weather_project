@@ -10,8 +10,10 @@
 
 
 ### About the app :bulb:
-A simple weather app that takes in data from [OpenWeatherAPI](https://openweathermap.org/) and displays various aspects in a dashboard.
-I designed the weather dashboard that will dynamically retrieve and display weather maps and a graph of the temperatures of a specific location. Hard as it may be to imagine it, a lot of the code is in pure Python thanks to Dash and other wrapper libraries.
+A simple weather app that takes in data from [OpenWeatherAPI](https://openweathermap.org/) and displays various aspects in a dashboard. 
+
+I wanted to explore Python based tools for frontend development especially because Python is the go to language for Data Science projects. Most of the time I have found that most python developers have to deal with the stress of working with JavaScript to build responsive web apps for their projects.
+I designed the weather dashboard that will dynamically retrieve and display weather maps and a graph of the temperatures of a specific location. Hard as it may be to imagine, a lot of the code for this app is in pure Python thanks to Dash and other wrapper libraries.
 
 * View the webapp [here](https://foreweatherapp.herokuapp.com/)
 * View the blog [here](https://medium.com/@joywanjiru879/fore-weather-app-745daff2bea7)
@@ -25,16 +27,16 @@ A user selects a location from the dropdowm menu and gets to see the current wea
 
 https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef-b9fb-13dcde3b2394.mp4
 
-### Main libraries used:
+### Main libraries used: :books:
 
 | Tool/Library                                                   | Purpose                      |
 | -------------------------------------------------------------- | -----------------------------|
 | [Dash](https://dash.plotly.com/)                               | Dashboard design (Termed as Python's React) :grinning:           |
 | [Dash Leaflet](https://dash-leaflet.herokuapp.com/)            | Responsive maps              |
-| [Plotly](https://plotly.com/python)                            | Interactive Graphs           |
+| [Plotly](https://plotly.com/python)                            | Interactive Graphs   :bar_chart:        |
 | [pyowm](https://pypi.org/project/pyowm/)                       | Connect to OpenWeatherMap    |
-| [Geopy](https://pypi.org/project/geopy/)                       | Get coordinates of locations |
-| [datetime](https://docs.python.org/3/library/datetime.html)    | display forecast dates       |
+| [Geopy](https://pypi.org/project/geopy/)                       | Get coordinates of locations :round_pushpin: |
+| [datetime](https://docs.python.org/3/library/datetime.html)    | display forecast dates  :date:     |
 | [mapbox](https://www.mapbox.com/maps/)                         | create custom tile map       |
 
 
@@ -56,13 +58,13 @@ https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Her-o1/weather_project/blob/main/LICENSE) file for details.
 
 ### Future
-I am looking forward to collecting more data i 
+I am looking forward to collecting more data and complete this project from a data science perspective
 
 
 ### Author :black_nib:
-### Joy Wanjiru
+#### Joy Wanjiru
 
-I am a data science enthusiast interested in working with Python 
+I am a data science enthusiast and a software engineering student at ALX and I love working with Python especially because of it's vast pool of libraries for scientific computing
 
 
 
