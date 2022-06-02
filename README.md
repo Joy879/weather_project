@@ -22,15 +22,15 @@ https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef
 
 ### Main libraries used:
 
-| Tool/Library                                                                       | Version |
+| Tool/Library                                                                       | Purpose |
 | ---------------------------------------------------------------------------------- | ------- |
-| [Dash](https://dash.plotly.com/)                                      | ^3.5.3  |
-| [Dash Leaflet](https://dash-leaflet.herokuapp.com/)                                                      | ^16.8.6 |
-| [Plotly](https://plotly.com/python)                                            | ^4.2.1  |
-| [pyowm](https://pypi.org/project/pyowm/)                                              | ^0.13.3 |
-| [Geopy](https://pypi.org/project/geopy/)                                 | ^9.11.2 |
-| [datetime](https://docs.python.org/3/library/datetime.html) | ^1.0.0  |
-| [mapbox](https://www.mapbox.com/maps/)                     | ^3.0.0  |
+| [Dash](https://dash.plotly.com/)                                      | Dashboard design |
+| [Dash Leaflet](https://dash-leaflet.herokuapp.com/)                                                      | Responsive maps |
+| [Plotly](https://plotly.com/python)                                            | Interactive Graphs  |
+| [pyowm](https://pypi.org/project/pyowm/)                                              | Connect to OpenWeatherMap |
+| [Geopy](https://pypi.org/project/geopy/)                                 | Get coordinates of locations |
+| [datetime](https://docs.python.org/3/library/datetime.html) | display forecast dates |
+| [mapbox](https://www.mapbox.com/maps/)                     | create custom tile map  |
 
 
 
