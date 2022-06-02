@@ -1,13 +1,13 @@
-### FoRe Weather App
+## FoRe Weather App :cloud:
 
 ![Fore_screenshot](https://user-images.githubusercontent.com/70502261/170562199-86f0e025-bb8a-41b8-96e6-fdd851d48b5a.png)
 
 
-#### About the app
+### About the app :bulb:
 A simple weather app that takes in data from [OpenWeatherAPI](https://openweathermap.org/) and displays various aspects in a dashboard.
 I designed the weather dashboard that will dynamically retrieve and display weather maps and a graph of the temperatures of a specific location
 
-#### How it works
+### How it works :feet:
 
 A user selects a location from the dropdowm menu and gets to see the current weather status, temperatures both minimum and maximum, the humidity as a percenatge as well as the weather icon displayed on that location's map. They also get to see a graph of 5-day temperature forecasts. A sneak preview is shown below:
 
@@ -38,11 +38,12 @@ For you to work with this project you need the following prerequisites:
         
 
 
-#### Usage
+### Usage
 
 
-#### Contributing
+### Contributing
 
-#### Related projects
+### Related projects
 
-#### Licensing
+### Licensing :lock:
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Her-o1/weather_project/blob/main/LICENSE) file for details.
