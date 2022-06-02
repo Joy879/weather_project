@@ -19,6 +19,7 @@ url ='https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9/tile
 app = Dash(__name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}])
 server = app.server
 
+# Designing the layout using html and dcc components
 app.layout = html.Div(
     children=[
         html.Div(
@@ -57,6 +58,7 @@ app.layout = html.Div(
                                 
                             ],
                         ),
+                        # Dis for current weather information
                         html.Div(
                             className="flex-gap",
                             children=[
@@ -77,7 +79,6 @@ app.layout = html.Div(
                             style={'width': '100%', 'height': '50vh', 'margin': "auto", "display": "block"}
                             ),
                         dcc.Graph(id="histogram"),
-                        # style={'border-color':'#0e051400','overflow-y':'hidden', 'border': 'None'}),
                     ],
                 ),
             ],
@@ -85,53 +86,65 @@ app.layout = html.Div(
     ]
 )
 #setting up the callbacks
+
+#Output 1: current weather status
 @app.callback(
     Output('weather-status', 'children'),
     Input('location-dropdown', 'value')
 )
 def update_weather(value):
+    """A function that updates the weather status e.g scattered clouds, light rain"""
     weather = mgr.weather_at_place(value).weather
     return f'{weather.detailed_status}'
 
-
+#Output 2: current temperature
 @app.callback(
     Output('temp', 'children'),
     Input('location-dropdown', 'value')
 )
 def update_temp(value):
+    """A function that updates the current temperature in degrees celsius"""
     temperature = mgr.weather_at_place(value).weather.temperature('celsius')["temp"]
     return f'Temp in celsius:  {temperature}'
 
 
+#Output 3: current minimum temperatures
 @app.callback(
     Output('min-temp', 'children'),
     Input('location-dropdown', 'value')
 )
 def update_tempmin(value):
+    """A function that updates current minimum temperature in degrees celsius"""
     temp_min = mgr.weather_at_place(value).weather.temperature('celsius')["temp_min"]
     return f'Min temp:  {temp_min}'
 
+#Output 4: current weather status
 @app.callback(
     Output('max-temp', 'children'),
     Input('location-dropdown', 'value')
 )
 def update_tempmax(value):
+    """A function that updates the current maximum temperature in degrees celsius"""
     temp_max = mgr.weather_at_place(value).weather.temperature('celsius')["temp_max"]
     return f'Max temp:  {temp_max}'
 
+#Output 5: current humidity
 @app.callback(
     Output('humidity', 'children'),
     Input('location-dropdown', 'value')
 )
 def update_humidity(value):
+    """A function that updates the current humidity in percentage """
     humidity = mgr.weather_at_place(value).weather.humidity
     return f'Humidity is {humidity} %'
 
+#Output 6: current weather icon and temperature displayed on leaflet maps
 @app.callback(
     Output('map-graph', 'children'),
     Input('location-dropdown', 'value')
 )
 def update_map(value):
+    """A function that updates the weather icon and temperature of a location and dsipalys them on the location in a map"""
     icon = mgr.weather_at_place(value).weather.weather_icon_url(size='2x')
     temperature = mgr.weather_at_place(value).weather.temperature('celsius')["temp"]
     getloc = loc.geocode(value)
@@ -147,22 +160,23 @@ def update_map(value):
         }
     return dl.Map( 
         [
-            dl.TileLayer(url=url ),
+            dl.TileLayer(url=url ),#setting up custom mapbox tile
             dl.Marker(
-                position=(iconlat, iconlon),
+                position=(iconlat, iconlon),#centering the icon on the location's coordinates
                 icon=icon_,
             ),
             dl.Popup( f'Temperature is {temperature}', position=(iconlat,iconlon))
                 
-        ],center=(getloc.latitude, getloc.longitude)
+        ],center=(getloc.latitude, getloc.longitude)#centering the map on the location's coordinates
         )
 
-
+#Output 7: weather forecasts displayed in a bar-graph
 @app.callback(
     Output('histogram', 'figure'),
     Input('location-dropdown', 'value')
 )
 def update_graph(value):
+    """A function that updates the graph to show 5-day temperature forecasts """
     days = []
     dates = []
     temp_min = []
@@ -183,7 +197,7 @@ def update_graph(value):
             temp_min[-1] = temperature
         if not temp_max[-1] or temperature > temp_max[-1]:
             temp_max[-1] = temperature
-
+    #using plotly graph objects to make two bar graphs
     fig = go.Figure(
         data=[
             go.Bar(
@@ -206,6 +220,7 @@ def update_graph(value):
             yaxis = dict(title ="Temperature (C)", showgrid = False)
         ),
     )
+    #styling the bar graphs
     fig.update_layout(
         barmode='group',
         paper_bgcolor="rgba(0,0,0,0)", 
