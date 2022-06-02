@@ -39,7 +39,15 @@ https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef
 | [datetime](https://docs.python.org/3/library/datetime.html)    | display forecast dates  :date:     |
 | [mapbox](https://www.mapbox.com/maps/)                         | create custom tile map       |
 
+### Main Feature 
+User selects a location and gets all the latest weather information displayed in a visually pleasing manner. 
 
+![Copy of FoRe MVP first look drawio (1)](https://user-images.githubusercontent.com/103201519/171530788-014f2353-f006-4bbd-829f-91fed1a5ec7d.png)
+
+All this is made possible through Dash.
+Dash has two main parts:
+* Layout - the HTML and DCC components that design the static webpage
+* Callbacks - Inputs and Outputs that define how the webpage becomes dynamic
 
 ### Installation :inbox_tray:
 
