@@ -10,9 +10,9 @@ import plotly.graph_objects as go
 
 #Initializing Geocoding API, Mapbox tiles  and pyowm
 loc = Nominatim(user_agent="GetLoc")
-owm = OWM(API_KEY)
+owm = OWM(API_KEY) #Replace this with your OpenWeatherMap API key
 mgr = owm.weather_manager()
-url ='https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9/tiles/256/{z}/{x}/{y}@2x?access_token=access_token'
+url ='https://api.mapbox.com/styles/v1/joywanjiru/cl3g3s8od004314qqtvggn6t9/tiles/256/{z}/{x}/{y}@2x?access_token=access_token' #mapbox custom tile. You can design your own using mapbox studio
 
 # Create dash app.
 
