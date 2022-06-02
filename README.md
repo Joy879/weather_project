@@ -20,6 +20,8 @@ A user selects a location from the dropdowm menu and gets to see the current wea
 
 https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef-b9fb-13dcde3b2394.mp4
 
+### Main libraries used:
+
 | Tool/Library                                                                       | Version |
 | ---------------------------------------------------------------------------------- | ------- |
 | [Dash](https://dash.plotly.com/)                                      | ^3.5.3  |
@@ -29,12 +31,8 @@ https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef
 | [Geopy](https://pypi.org/project/geopy/)                                 | ^9.11.2 |
 | [datetime](https://docs.python.org/3/library/datetime.html) | ^1.0.0  |
 | [mapbox](https://www.mapbox.com/maps/)                     | ^3.0.0  |
-Main libraries used are:
-* Dash
-* Dash leaflet
-* Geopy
-* Plotly
-* pyowm
+
+
 
 * View the webapp [here](https://foreweatherapp.herokuapp.com/)
 * View the blog [here](https://medium.com/@joywanjiru879/fore-weather-app-745daff2bea7)
