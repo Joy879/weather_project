@@ -11,7 +11,7 @@
 
 ### About the app :bulb:
 A simple weather app that takes in data from [OpenWeatherAPI](https://openweathermap.org/) and displays various aspects in a dashboard.
-I designed the weather dashboard that will dynamically retrieve and display weather maps and a graph of the temperatures of a specific location
+I designed the weather dashboard that will dynamically retrieve and display weather maps and a graph of the temperatures of a specific location. Hard as it may be to imagine it, a lot of the code is in pure Python thanks to Dash and other wrapper libraries.
 
 * View the webapp [here](https://foreweatherapp.herokuapp.com/)
 * View the blog [here](https://medium.com/@joywanjiru879/fore-weather-app-745daff2bea7)
@@ -29,7 +29,7 @@ https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef
 
 | Tool/Library                                                   | Purpose                      |
 | -------------------------------------------------------------- | -----------------------------|
-| [Dash](https://dash.plotly.com/)                               | Dashboard design             |
+| [Dash](https://dash.plotly.com/)                               | Dashboard design (Termed as Python's React           |
 | [Dash Leaflet](https://dash-leaflet.herokuapp.com/)            | Responsive maps              |
 | [Plotly](https://plotly.com/python)                            | Interactive Graphs           |
 | [pyowm](https://pypi.org/project/pyowm/)                       | Connect to OpenWeatherMap    |
@@ -50,15 +50,20 @@ https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef
          
               git clone this project into your machine
               pip install -r requirements.txt
-        
-
-
+ 
 ### Usage
-
-
-### Contributing
-
-### Related projects
-
 ### Licensing :lock:
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Her-o1/weather_project/blob/main/LICENSE) file for details.
+
+### Future
+I am looking forward to collecting more data i 
+
+
+### Author :black_nib:
+### Joy Wanjiru
+
+I am a data science enthusiast interested in working with Python 
+
+
+
+
