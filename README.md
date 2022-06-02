@@ -7,11 +7,19 @@
 A simple weather app that takes in data from [OpenWeatherAPI](https://openweathermap.org/) and displays various aspects in a dashboard.
 I designed the weather dashboard that will dynamically retrieve and display weather maps and a graph of the temperatures of a specific location
 
+#### How it works
+
+A user selects a location from the dropdowm menu and gets to see the current weather status, temperatures both minimum and maximum, the humidity as a percenatge as well as the weather icon displayed on that location's map. They also get to see a graph of 5-day temperature forecasts. A sneak preview is shown below:
 
 
 https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef-b9fb-13dcde3b2394.mp4
 
-
+Main libraries used are:
+* Dash
+* Dash leaflet
+* Geopy
+* Plotly
+* pyowm
 
 * View the webapp [here](https://foreweatherapp.herokuapp.com/)
 * View the blog [here](https://medium.com/@joywanjiru879/fore-weather-app-745daff2bea7)
