@@ -29,7 +29,7 @@ https://user-images.githubusercontent.com/103201519/171522868-43c5661f-f0a0-45ef
 
 | Tool/Library                                                   | Purpose                      |
 | -------------------------------------------------------------- | -----------------------------|
-| [Dash](https://dash.plotly.com/)                               | Dashboard design (Termed as Python's React           |
+| [Dash](https://dash.plotly.com/)                               | Dashboard design (Termed as Python's React) :grinning:           |
 | [Dash Leaflet](https://dash-leaflet.herokuapp.com/)            | Responsive maps              |
 | [Plotly](https://plotly.com/python)                            | Interactive Graphs           |
 | [pyowm](https://pypi.org/project/pyowm/)                       | Connect to OpenWeatherMap    |
