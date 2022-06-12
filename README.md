@@ -53,8 +53,8 @@ Dash has two main parts:
 
 #### Prerequisites:
 
-* :heavy_check_mark: An OpenWeatherMap free account which will give you access to an API key
-* :heavy_check_mark: Choose a map tile layer of your choice either by creating a [mapbox free account](https://account.mapbox.com/auth/signup/) and designing your tiles in mapbox studio or choosing from the existing list of available [tile options](http://leaflet-extras.github.io/leaflet-providers/preview/)
+- [ ] An OpenWeatherMap free account which will give you access to an API key
+- [ ] Choose a map tile layer of your choice either by creating a [mapbox free account](https://account.mapbox.com/auth/signup/) and designing your tiles in mapbox studio or choosing from the existing list of available [tile options](http://leaflet-extras.github.io/leaflet-providers/preview/)
 
 
          
