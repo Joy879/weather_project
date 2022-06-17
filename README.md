@@ -17,7 +17,7 @@ I designed the weather dashboard that will dynamically retrieve and display weat
 
 * View the webapp [here](https://foreweatherapp.herokuapp.com/)
 * View the blog [here](https://medium.com/@joywanjiru879/fore-weather-app-745daff2bea7)
-* [LinkedIn](https://www.linkedin.com/in/joy-wanjiru-b717a0240/)
+
 
 
 ### How it works :feet:
