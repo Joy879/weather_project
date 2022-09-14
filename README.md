@@ -73,7 +73,7 @@ If you have any ideas or suggestions or conributions feel free to reach out to m
 ### Author :black_nib:
 #### Joy Wanjiru
 
-I am a data science enthusiast and a software engineering student at ALX and I love working with Python especially because of it's vast pool of libraries for scientific computing
+I am a data science enthusiast and a software engineer and I love working with Python especially because of it's vast pool of libraries for scientific computing
 
 
 
